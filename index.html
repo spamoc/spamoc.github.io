@@ -1,1 +1,63 @@
-<html><body> it work.
+<html lang="ja">
+<head>
+<title>spamoc page</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
+<script type="text/javascript">
+window.onload = function() {
+var body = document.body;
+body.innerHTML = marked(body.innerText || body.textContent);
+
+Array.prototype.slice.apply(body.getElementsByTagName('a')).forEach(function(el) {
+    if (el.hostname !== location.hostname) {
+        el.target = '_blank';
+    }
+});
+document.title = decodeURIComponent(location.href.split('/').pop().split('.').shift());
+}
+</script>
+</head>
+<body>
+<pre>
+## spamoc
+
+### どんな人
+
+* web application developer(serverside)
+* cloud infrastracture engineer
+
+### 話す
+
+* java
+* python
+* 日本語
+
+### 首ったけ
+
+* mBaaS
+* Redis
+* scala
+* go
+* swift
+* work flow automation
+* pottering
+* hijau bintang
+* tech dance
+* hardstyle
+* fullon psy
+* アニメ戦国乙女
+* アニメ戦国コレクション
+
+### ここ以外
+
+* diary
+    * https://spamoc.github.io/diary
+* twitter
+    * https://twitter.com/spamoc
+* qiita
+    * http://qiita.com/spamoc
+* github
+    * https://github.com/spamoc
+
+</pre>
+</body>
+</html>
